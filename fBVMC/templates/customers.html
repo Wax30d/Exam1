@@ -1,0 +1,11 @@
+
+{% block content %}
+  <h1>Customers</h1>
+  <ul>
+    {% for customer in customer_list %}
+      <li>
+        <a href="{% url 'customer_detail' customer.pk %}">{{ customer.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

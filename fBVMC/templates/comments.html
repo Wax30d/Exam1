@@ -1,0 +1,11 @@
+
+{% block content %}
+  <h1>Comments</h1>
+  <ul>
+    {% for comment in comment_list %}
+      <li>
+        <a href="{% url 'comment_detail' comment.pk %}">{{ comment.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

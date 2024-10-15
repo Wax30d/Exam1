@@ -1,0 +1,6 @@
+
+{% block content %}
+  <h1>Comment: {{ comment.text }}</h1>
+  <p>Time: {{ comment.created_at }}</p>
+  <p>Name of the Blog: {{ comment.blog_post.title }}</p>
+{% endblock %}

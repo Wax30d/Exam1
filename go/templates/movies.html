@@ -1,0 +1,11 @@
+
+{% block content %}
+  <h1>Movies</h1>
+  <ul>
+    {% for movie in movie_list %}
+      <li>
+        <a href="{% url 'movie_detail' movie.pk %}">{{ movie.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

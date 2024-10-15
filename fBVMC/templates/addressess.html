@@ -1,0 +1,10 @@
+{% block content %}
+  <h1>Addressess</h1>
+  <ul>
+    {% for address in address_list %}
+      <li>
+        <a href="{% url 'address_detail' address.pk %}">Address {{ address.pk }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

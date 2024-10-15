@@ -1,0 +1,8 @@
+
+{% block content %}
+  <h1>{{ car.name }}</h1>
+  <p>{{ car.description }}</p>
+  <h2>Engine</h2>
+  <p>Horsepower: {{ car.engine.horsepower }}</p>
+  <p>Fuel Type: {{ car.engine.fuel_type }}</p>
+{% endblock %}

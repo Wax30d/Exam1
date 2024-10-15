@@ -1,0 +1,11 @@
+
+{% block content %}
+  <h1>Cars</h1>
+  <ul>
+    {% for car in car_list %}
+      <li>
+        <a href="{% url 'car_detail' car.pk %}">{{ car.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

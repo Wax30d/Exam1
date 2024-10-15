@@ -1,0 +1,8 @@
+
+{% block content %}
+  <h1>{{ customer.name }}</h1>
+  <p>{{ customer.email }}</p>
+  <h2>Address</h2>
+  <p>City: {{ customer.address.city }}</p>
+  <p>Street: {{ customer.address.street }}</p>
+{% endblock %}

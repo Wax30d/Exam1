@@ -1,0 +1,13 @@
+
+{% block content %}
+  <h1>{{ movie.title }}</h1>
+  <p>Release Date: {{ movie.release_date }}</p>
+  <h2>Actors</h2>
+  <ul>
+    {% for actor in movie.actors.all %}
+      <li>
+        <a href="{% url 'actor_detail' actor.pk %}">{{ actor.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

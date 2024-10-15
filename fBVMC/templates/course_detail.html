@@ -1,0 +1,13 @@
+
+{% block content %}
+  <h1>{{ course.name }}</h1>
+  <p>Release Date: {{ course.description }}</p>
+  <h2>Students</h2>
+  <ul>
+    {% for student in course.student_set.all %}
+      <li>
+        <a href="{% url 'student_detail' student.pk %}">{{ student.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
